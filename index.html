@@ -3,7 +3,60 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>GrafCore - Welcome</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
   </head>
-  <body></body>
+  <body>
+    <div id="page1" class="page active">
+      <div id="welcome-page__inner" class="page__inner container">
+        <img
+          id="welcome-page__inner_logo"
+          src="/images/welcome-page__logo.svg"
+          alt="graftcore"
+        />
+        <img
+          id="welcome-page__inner_image"
+          id="welcome-page__welcome"
+          src="/images/welcome-page__welcome.svg"
+          alt=""
+        />
+        <div id="button-box">
+          <button onclick="showPage(2)" id="login-button" class="button">
+            Log In
+          </button>
+          <button id="signin-button" class="button">Sign In</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="page2" class="page">
+      <div id="login-page__inner" class="page__inner container">
+        <img
+          onclick="showPage(1)"
+          src="/images/welcome-page__logo.svg"
+          alt="graftcore"
+        />
+        <h2>Hello there!</h2>
+        <div id="login-page__inner__login-block">
+          <div id="login-page__inner__login-block__email-block">
+            <p>Email Address</p>
+            <input type="email" /placeholder="youremail@domain.com">
+          </div>
+          <div id="login-page__inner__login-block__password-block">
+            <p>Password</p>
+            <input type="password" /placeholder="********">
+          </div>
+          <button>Continue</button>
+          <p>Change Password</p>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>

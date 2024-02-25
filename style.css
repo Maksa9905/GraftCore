@@ -1,0 +1,139 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Noto Sans", sans-serif;
+}
+
+button {
+  border: 1px solid transparent;
+  border-radius: 5px;
+  background-color: #f3387e;
+  font-size: "Noto Sans", sans-serif;
+}
+
+input {
+  height: 45px;
+  width: 280px;
+  border: 1px solid #8b8b8b;
+  border-radius: 8px;
+  font-weight: 500;
+  padding-left: 10px;
+  background-color: #f1f1f1;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.page__inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+  align-items: center;
+}
+
+#welcome-page__inner_logo {
+  margin-bottom: 70px;
+}
+
+#welcome-page__inner_image {
+  margin-bottom: 80px;
+}
+
+#button-box {
+  display: flex;
+  flex-direction: column;
+}
+
+#button-box button {
+  margin-bottom: 15px;
+  color: white;
+  height: 45px;
+  width: 280px;
+  box-shadow: 0 2px 10px 0 #676767;
+}
+
+#login-page__inner__login-block {
+  margin-bottom: 100px;
+}
+
+#login-page__inner__login-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#login-page__inner img {
+  margin-bottom: 30px;
+}
+
+#login-page__inner h2 {
+  margin-bottom: 40px;
+}
+
+#login-page__inner__login-block div {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  margin-bottom: 30px;
+}
+
+#login-page__inner__login-block button {
+  margin-bottom: 15px;
+  color: white;
+  height: 45px;
+  width: 280px;
+  box-shadow: 0 2px 10px 0 #676767;
+}
+
+#login-page__inner__login-block p:last-child {
+  color: #46006c;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+/* Анимации и всякая шняга */
+
+body {
+  overflow: hidden;
+}
+
+.page {
+  display: none;
+  position: relative;
+}
+
+.active {
+  display: block !important;
+}
+
+.next {
+  animation: appear-from-right 0.5s ease;
+}
+
+.previous {
+  animation: appear-from-left 0.5s ease;
+}
+
+@keyframes appear-from-right {
+  from {
+    right: -100%;
+  }
+  to {
+    right: 0;
+  }
+}
+
+@keyframes appear-from-left {
+  from {
+    right: 100%;
+  }
+  to {
+    right: 0;
+  }
+}
+
