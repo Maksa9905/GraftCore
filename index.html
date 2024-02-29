@@ -11,36 +11,47 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="animations.css" />
     <script src="script.js"></script>
   </head>
   <body>
+    <!--    PAGE 1 (WELCOM PAGE)    -->
     <div id="page1" class="page active">
       <div id="welcome-page__inner" class="page__inner container">
         <img
           id="welcome-page__inner_logo"
-          src="/images/welcome-page__logo.svg"
+          src="./images/welcome-page__logo.svg"
           alt="graftcore"
         />
         <img
           id="welcome-page__inner_image"
-          id="welcome-page__welcome"
-          src="/images/welcome-page__welcome.svg"
-          alt=""
+          src="./images/welcome-page__welcome.svg"
+          alt="girl"
         />
-        <div id="button-box">
-          <button onclick="showPage(2)" id="login-button" class="button">
+        <div id="welcome-page__inner__button-box">
+          <button onclick="showPage('page2')" id="login-button" class="button">
             Log In
           </button>
-          <button id="signin-button" class="button">Sign In</button>
+          <button onclick="showPage('page3')" id="signin-button" class="button">
+            Sign In
+          </button>
         </div>
       </div>
     </div>
 
+    <!--    PAGE 2 (WELCOME PAGE)    -->
     <div id="page2" class="page">
       <div id="login-page__inner" class="page__inner container">
         <img
-          onclick="showPage(1)"
-          src="/images/welcome-page__logo.svg"
+          class="back-arrow"
+          onclick="showPage('page1')"
+          src="./images/arrow-left.svg"
+          alt=""
+        />
+
+        <img
+          onclick="showPage('page1')"
+          src="./images/welcome-page__logo.svg"
           alt="graftcore"
         />
         <h2>Hello there!</h2>
@@ -55,6 +66,109 @@
           </div>
           <button>Continue</button>
           <p>Change Password</p>
+        </div>
+      </div>
+    </div>
+
+    <div id="page3" class="page">
+      <div id="onboarding__inner" class="page__inner container">
+        <img
+          class="back-arrow"
+          onclick="showPage('page1')"
+          src="./images/arrow-left.svg"
+          alt=""
+        />
+
+        <div id="board1" class="onboarding__inner__clider board board-active">
+          <img src="./images/onboarding-img-1.svg" alt="" />
+          <h2>Send Money</h2>
+          <p class="onboarding__inner__clider__text-box">
+            Send money instantly from your Graftcore account to all networks and
+            banks.
+          </p>
+        </div>
+        <div id="board2" class="onboarding__inner__clider board">
+          <img src="./images/onboarding-img-2.svg" alt="" />
+          <h2>Pay Bills</h2>
+          <p class="onboarding__inner__clider__text-box">
+            Pay Bills such as Water bill, Electricity, TV subscriptions etc. Buy
+            airtime & Bundles.
+          </p>
+        </div>
+        <div id="board3" class="onboarding__inner__clider board">
+          <img src="./images/onboarding-img-3.svg" alt="" />
+          <h2>Pay Merchants</h2>
+          <p class="onboarding__inner__clider__text-box">
+            Pay by Phone at merchants with Graftcore accounts even with
+            insufficient balance.
+          </p>
+        </div>
+        <div class="onboarding__inner__clider__button-box">
+          <button
+            id="but1"
+            onclick="animButtons(1);showBoard('board1')"
+            class="but but-active"
+          ></button>
+          <button
+            id="but2"
+            onclick="animButtons(2);showBoard('board2')"
+            class="but"
+          ></button>
+          <button
+            id="but3"
+            onclick="animButtons(3);showBoard('board3')"
+            class="but"
+          ></button>
+        </div>
+        <div class="skipNext__button-box">
+          <button onclick="showPage('page4')" id="skip">Skip</button>
+          <button onclick="nextBoard()" id="next">Next</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="page4" class="page">
+      <div id="signin-page__inner" class="page__inner container">
+        <img
+          class="back-arrow"
+          onclick="showPage('page1')"
+          src="./images/arrow-left.svg"
+          alt=""
+        />
+        <div id="signin-page__inner__input-block">
+          <h2>Email & Password</h2>
+          <p>
+            Open a Graftcore account with a few details. your password must have
+            at least 8 characters including letters and a number
+          </p>
+          <div id="signin-page__email-block">
+            <p>Email Address</p>
+            <input type="email" /placeholder="youremail@domain.com">
+          </div>
+          <div id="signin-page__password-block">
+            <p>Password</p>
+            <input type="password" /placeholder="********">
+          </div>
+          <div id="signin-page__password-block_confirm">
+            <p>Confirm Password</p>
+            <input type="password" /placeholder="********">
+          </div>
+        </div>
+        <div id="signin-page__button-block">
+          <p>
+            By tapping “Next”, you agree to our Terms & Conditions and Privacy
+            Policy.
+          </p>
+          <button class="next-button" onclick="showPage('page5')">Next</button>
+        </div>
+      </div>
+    </div>
+    <div id="page5" class="page">
+      <div id="confirm-email-page__inner" class="page__inner container">
+        <div id="confirm-email-page__inner">
+          <h2>Confirm your email address</h2>
+          <p>We’ll send a code to your email address to confirm you own it.</p>
+          <h2 class="confirm-email-page__inner">youremail@yandex.ru</h2>
         </div>
       </div>
     </div>

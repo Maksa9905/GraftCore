@@ -5,6 +5,10 @@
   font-family: "Noto Sans", sans-serif;
 }
 
+body {
+  overflow: hidden;
+}
+
 button {
   border: 1px solid transparent;
   border-radius: 5px;
@@ -23,7 +27,7 @@ input {
 }
 
 .container {
-  width: 90%;
+  max-width: 300px;
   margin: 0 auto;
 }
 
@@ -44,12 +48,12 @@ input {
   margin-bottom: 80px;
 }
 
-#button-box {
+#welcome-page__inner__button-box {
   display: flex;
   flex-direction: column;
 }
 
-#button-box button {
+#welcome-page__inner__button-box button {
   margin-bottom: 15px;
   color: white;
   height: 45px;
@@ -96,44 +100,104 @@ input {
   font-weight: 600;
 }
 
-/* Анимации и всякая шняга */
-
-body {
-  overflow: hidden;
+.onboarding__inner__clider {
+  max-width: 300px;
 }
 
-.page {
-  display: none;
-  position: relative;
+.onboarding__inner__clider img {
+  margin-bottom: 30px;
 }
 
-.active {
-  display: block !important;
+.onboarding__inner__clider h2 {
+  margin-bottom: 10px;
 }
 
-.next {
-  animation: appear-from-right 0.5s ease;
+.onboarding__inner__clider p {
+  margin-bottom: 30px;
 }
 
-.previous {
-  animation: appear-from-left 0.5s ease;
+.onboarding__inner__clider__button-box {
+  margin-bottom: 80px;
 }
 
-@keyframes appear-from-right {
-  from {
-    right: -100%;
-  }
-  to {
-    right: 0;
-  }
+.but {
+  background-color: transparent;
+  border: 2px solid #f3387e;
+  width: 15px;
+  height: 10px;
+  margin-right: 4px;
+  margin-left: 4px;
 }
 
-@keyframes appear-from-left {
-  from {
-    right: 100%;
-  }
-  to {
-    right: 0;
-  }
+.but-active {
+  background-color: #f3387e;
+  width: 70px;
 }
 
+.skipNext__button-box {
+  width: 280px;
+  display: flex;
+  justify-content: space-between;
+}
+
+#skip {
+  color: #f3387e;
+  padding: 10px 20px;
+  background-color: transparent;
+  font-weight: 600;
+}
+
+#next {
+  color: white;
+  padding: 10px 20px;
+  background-color: #f3387e;
+  border-radius: 30px;
+  font-weight: 600;
+}
+
+.back-arrow {
+  position: absolute;
+  left: 2%;
+}
+
+#signin-page__inner__input-block {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  text-align: left;
+}
+
+#signin-page__inner__input-block h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+#signin-page__inner__input-block p {
+  font-size: 15px;
+}
+
+#signin-page__email-block {
+  margin-top: 20px;
+}
+
+#signin-page__password-block {
+  margin-top: 20px;
+}
+
+#signin-page__password-block_confirm {
+  margin-top: 20px;
+  margin-bottom: 70px;
+}
+
+#signin-page__button-block {
+  text-align: start;
+}
+
+#signin-page__button-block button {
+  margin-bottom: 15px;
+  color: white;
+  height: 45px;
+  width: 280px;
+  box-shadow: 0 2px 10px 0 #676767;
+  margin-top: 20px;
+}

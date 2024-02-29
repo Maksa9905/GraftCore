@@ -1,0 +1,133 @@
+@keyframes slide_to_left {
+  from {
+    transform: translateX(0);
+    visibility: visible;
+  }
+  to {
+    transform: translateX(-100%);
+    visibility: hidden;
+  }
+}
+
+@keyframes slide_to_right {
+  from {
+    transform: translateX(0);
+    visibility: visible;
+  }
+  to {
+    transform: translateX(100%);
+    visibility: hidden;
+  }
+}
+
+@keyframes slide_from_right {
+  from {
+    transform: translateX(100%);
+    visibility: hidden;
+  }
+  to {
+    transform: translateX(0);
+    visibility: visible;
+  }
+}
+
+@keyframes slide_from_left {
+  from {
+    transform: translateX(-100%);
+    visibility: hidden;
+  }
+  to {
+    transform: translateX(0);
+    visibility: visible;
+  }
+}
+
+.animation_slide_to_left {
+  animation: slide_to_left 0.5s ease;
+}
+
+.animation_slide_to_right {
+  animation: slide_to_right 0.5s ease;
+}
+
+.animation_slide_from_left {
+  animation: slide_from_left 0.5s ease;
+}
+
+.animation_slide_from_right {
+  animation: slide_from_right 0.5s ease;
+}
+
+.page {
+  display: none;
+}
+
+.active {
+  display: block;
+}
+
+@keyframes button_activate {
+  from {
+    background-color: transparent;
+    width: 15px;
+  }
+  to {
+    background-color: #f3387e;
+    width: 70px;
+  }
+}
+
+@keyframes button_diactivate {
+  from {
+    background-color: #f3387e;
+    width: 70px;
+  }
+  to {
+    background-color: transparent;
+    width: 15px;
+  }
+}
+
+.animation_button_activate {
+  animation: button_activate 0.5s ease;
+}
+
+.animation_button_diactivate {
+  animation: button_diactivate 0.5s ease;
+}
+
+.board {
+  display: none;
+  opacity: 0;
+}
+
+.board-active {
+  display: block;
+  opacity: 1;
+}
+
+@keyframes board-activate {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes board-diactivate {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.animation_board_activate {
+  animation: board-activate 0.5s ease;
+}
+
+.animation_board_diactivate {
+  animation: board-activate 0.5s ease;
+}
