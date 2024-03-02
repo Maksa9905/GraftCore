@@ -16,7 +16,7 @@
   </head>
   <body>
     <!--    PAGE 1 (WELCOM PAGE)    -->
-    <div id="page1" class="page active">
+    <div id="page1" class="page">
       <div id="welcome-page__inner" class="page__inner container">
         <img
           id="welcome-page__inner_logo"
@@ -139,19 +139,25 @@
           <h2>Email & Password</h2>
           <p>
             Open a Graftcore account with a few details. your password must have
-            at least 8 characters including letters and a number
+            at least 8 characters including letters, numbers and special
+            simbols.
           </p>
           <div id="signin-page__email-block">
             <p>Email Address</p>
-            <input type="email" /placeholder="youremail@domain.com">
+            <input id="signin-page__email-block__email" type="email"
+            /placeholder="youremail@domain.com">
+            <p id="signin-page__inner__email__error-title"></p>
           </div>
           <div id="signin-page__password-block">
             <p>Password</p>
-            <input type="password" /placeholder="********">
+            <input id="signin-page__email-block__password" type="password"
+            /placeholder="********">
           </div>
           <div id="signin-page__password-block_confirm">
             <p>Confirm Password</p>
-            <input type="password" /placeholder="********">
+            <input id="signin-page__email-block__confirm-password"
+            type="password" /placeholder="********">
+            <p id="signin-page__inner__password__error-title"></p>
           </div>
         </div>
         <div id="signin-page__button-block">
@@ -159,17 +165,29 @@
             By tapping “Next”, you agree to our Terms & Conditions and Privacy
             Policy.
           </p>
-          <button class="next-button" onclick="showPage('page5')">Next</button>
+          <button id="" class="next-button" onclick="sendEmail()">Next</button>
         </div>
       </div>
     </div>
-    <div id="page5" class="page">
+    <div id="page5" class="page active">
       <div id="confirm-email-page__inner" class="page__inner container">
-        <div id="confirm-email-page__inner">
-          <h2>Confirm your email address</h2>
-          <p>We’ll send a code to your email address to confirm you own it.</p>
-          <h2 class="confirm-email-page__inner">youremail@yandex.ru</h2>
+        <img
+          class="back-arrow"
+          onclick="showPage('page4')"
+          src="./images/arrow-left.svg"
+          alt=""
+        />
+        <h2>Confirm your email address</h2>
+        <p>We’ll send a code to your email address to confirm you own it.</p>
+        <h2 id="confirm-email-page__inner__email">Maksa9905@yandex.ru</h2>
+        <div id="confirm-email-page__inner__verification-code">
+          <p>Verification code</p>
+          <input id="confirm-email-page__inner__verification-code__input"
+          type="password" /placeholder="********">
+          <p id="confirm-email-page__inner__verification-code__error-title"></p>
         </div>
+        <p id="resend-code__button">Resend Code</p>
+        <button class="next-button" onclick="">Next</button>
       </div>
     </div>
   </body>
